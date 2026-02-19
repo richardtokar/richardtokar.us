@@ -1,2 +1,2 @@
-# www.richardtokar.us
+# richardtokar.us
 My resume.
