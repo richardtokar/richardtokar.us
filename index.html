@@ -1,523 +1,850 @@
-<!doctype html>
-<html lang="en" data-theme="dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Richard Tokar - Computer Technology Teacher</title>
-    <meta name="description" content="Richard Tokar's portfolio showcasing experience and skills as a Computer Technology Teacher, including work history, education, and tech skills." />
-    <meta name="keywords" content="Richard Tokar, Computer Technology Teacher, IT, Networking, Cybersecurity, Education, Work Experience, Tech Skills, LinkedIn, GitHub" />
-    <meta name="author" content="Richard Tokar" />
-    <link rel="canonical" href="https://www.richardtokar.com" />
-    <style>
-      :root {
-        color-scheme: dark;
-        --font-system: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        --bg: #f8f8f8;
-        --panel: #ffffff;
-        --text: #1d1d1f;
-        --muted: #6e6e73;
-        --line: #d9d9de;
-        --chip-bg: transparent;
-        --chip-border: #c7c7cc;
-        --link: #4f5966;
-        --link-hover: #1d1d1f;
-      }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Richard Tokar — Computer Technology Teacher | Cybersecurity, Networking &amp; IT Education</title>
+<meta name="description" content="Richard Tokar teaches dual-enrollment Computer Technology at OCM BOCES in Camillus, New York — cybersecurity, networking, and hardware/software. Former Director of IT. CompTIA CySA+, PenTest+, and Security+ certified.">
+<meta name="author" content="Richard Tokar">
+<meta name="theme-color" content="#0B1B2B">
+<link rel="canonical" href="https://richardtokar.us/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Richard Tokar — Computer Technology Teacher">
+<meta property="og:description" content="Dual-enrollment Computer Technology instruction at OCM BOCES: cybersecurity, networking, and hardware/software. Twenty-five years of certification across IT, security, cloud, and AI.">
+<meta property="og:url" content="https://richardtokar.us/">
+<meta property="og:image" content="https://richardtokar.us/richard-tokar-photo.jpg">
+<script>document.documentElement.className += " js";</script>
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --ink:#0B1B2B;
+  --slate:#4A5F75;
+  --paper:#FFFFFF;
+  --mist:#F1F5F8;
+  --line:#D6DEE7;
+  --teal:#0A6C75;
+  --teal-lt:#5FD3DE;
+  --dim:#A8BCD0;
 
-      html[data-theme="dark"] {
-        color-scheme: dark;
-        --bg: #111214;
-        --panel: #17181b;
-        --text: #f5f5f7;
-        --muted: #a1a1a6;
-        --line: #2c2d31;
-        --chip-bg: #141519;
-        --chip-border: #3a3b40;
-        --link: #c0c4cc;
-        --link-hover: #ffffff;
-      }
+  --sans:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
 
-      * {
-        box-sizing: border-box;
-      }
+  --wrap:1140px;
+  --gut:clamp(1.15rem,4vw,2.5rem);
+  --sec:clamp(3.25rem,7vw,5.5rem);
+  --r:3px;
+}
 
-      body {
-        margin: 0;
-        font-family: var(--font-system);
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.55;
-        font-size: 15px;
-      }
+/* ---------- base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:clamp(1rem,0.97rem + 0.16vw,1.0625rem);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--teal);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+h1,h2,h3,h4{margin:0;line-height:1.16;letter-spacing:-0.021em;font-weight:650}
+p{margin:0 0 1em}
+p:last-child{margin-bottom:0}
+ul{margin:0;padding:0;list-style:none}
+:focus-visible{outline:2.5px solid var(--teal);outline-offset:3px;border-radius:2px}
+.dark :focus-visible{outline-color:var(--teal-lt)}
 
-      body.is-booting {
-        overflow: hidden;
-      }
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:var(--gut)}
+.vh{
+  position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;
+  overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;border:0;
+}
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--ink);color:#fff;padding:.7rem 1.1rem;font-size:.9rem;
+  text-decoration:none;font-weight:600;
+}
+.skip:focus{left:0}
 
-      .boot-screen {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        display: grid;
-        place-items: center;
-        background: #0b0f17;
-        color: #f5f8ff;
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 315ms ease, visibility 315ms ease;
-      }
+/* ---------- eyebrow / section header ---------- */
+.eyebrow{
+  font-family:var(--mono);font-size:.745rem;letter-spacing:.15em;
+  text-transform:uppercase;color:var(--teal);margin:0 0 .85rem;font-weight:600;
+}
+.dark .eyebrow{color:var(--teal-lt)}
+.sec-head{margin-bottom:clamp(1.75rem,3.5vw,2.5rem)}
+.sec-head h2{font-size:clamp(1.6rem,1.15rem + 1.9vw,2.35rem)}
+.sec-head p{color:var(--slate);max-width:62ch;margin-top:.7rem;font-size:.97em}
+.rule{height:1px;background:var(--line);border:0;margin:0}
 
-      body.boot-complete .boot-screen {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-      }
+/* ---------- nav ---------- */
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(160%) blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:62px}
+.brand{
+  font-weight:700;letter-spacing:-.02em;color:var(--ink);text-decoration:none;
+  font-size:1.02rem;white-space:nowrap;
+}
+.brand span{font-family:var(--mono);font-size:.715rem;letter-spacing:.14em;color:var(--teal);
+  display:block;font-weight:600;text-transform:uppercase;margin-top:1px}
+.nav-links{display:flex;gap:clamp(.9rem,1.9vw,1.6rem);align-items:center}
+.nav-links a{
+  color:var(--slate);text-decoration:none;font-size:.86rem;font-weight:550;
+  padding:.35rem 0;border-bottom:2px solid transparent;white-space:nowrap;
+}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a[aria-current="true"]{color:var(--ink);border-bottom-color:var(--teal)}
+.nav-toggle{display:none}
 
-      .boot-center {
-        width: min(90vw, 360px);
-        text-align: center;
-      }
+@media (max-width:919px){
+  .js .nav-links{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    flex-direction:column;align-items:stretch;gap:0;
+    background:var(--paper);border-bottom:1px solid var(--line);
+    padding:.3rem var(--gut) .9rem;
+  }
+  .js .nav-links.open{display:flex}
+  .nav-links a{padding:.72rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .nav-links a:last-child{border-bottom:0}
+  .nav-links a[aria-current="true"]{border-bottom-color:var(--line);color:var(--teal)}
+  .js .nav-toggle{
+    display:inline-flex;align-items:center;gap:.5rem;background:none;
+    border:1px solid var(--line);border-radius:var(--r);color:var(--ink);
+    font:600 .82rem/1 var(--sans);padding:.6rem .8rem;cursor:pointer;
+  }
+  .nav-toggle:hover{border-color:var(--slate)}
+  .bars{display:block;width:15px;height:9px;border-top:2px solid currentColor;border-bottom:2px solid currentColor}
+  .nav-in{position:relative}
+}
 
-      .boot-name {
-        margin: 0;
-        font-size: clamp(1.5rem, 4vw, 2.05rem);
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-weight: 650;
-      }
+/* ---------- hero ---------- */
+.hero{padding:clamp(2.5rem,6vw,4.75rem) 0 clamp(2.5rem,5vw,4rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:clamp(1.75rem,4.5vw,3.75rem);align-items:start}
+.hero h1{font-size:clamp(2.3rem,1.35rem + 4.3vw,4rem);letter-spacing:-.035em;font-weight:700}
+.hero-role{
+  font-size:clamp(1.02rem,.95rem + .45vw,1.28rem);font-weight:600;color:var(--ink);
+  margin:.7rem 0 0;line-height:1.35;
+}
+.hero-role em{font-style:normal;color:var(--teal);font-weight:600}
+.hero-lede{color:var(--slate);max-width:56ch;margin-top:1.05rem;font-size:1.03em}
+.hero-photo{position:relative;max-width:330px;margin-left:auto;width:100%}
+.hero-photo img{
+  width:100%;border-radius:var(--r);
+  border:1px solid var(--line);
+  box-shadow:0 1px 2px rgba(11,27,43,.06),0 12px 28px -18px rgba(11,27,43,.45);
+}
 
-      .boot-dots {
-        margin-top: 22px;
-        display: inline-flex;
-        gap: 10px;
-        align-items: center;
-      }
+/* actions */
+.actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1.7rem}
+.btn{
+  display:inline-flex;align-items:center;gap:.5rem;
+  font:600 .9rem/1 var(--sans);text-decoration:none;border-radius:var(--r);
+  padding:.82rem 1.15rem;border:1px solid transparent;transition:background .16s,color .16s,border-color .16s;
+}
+.btn-1{background:var(--ink);color:#fff}
+.btn-1:hover{background:#16324B;color:#fff}
+.btn-2{border-color:var(--line);color:var(--ink);background:var(--paper)}
+.btn-2:hover{border-color:var(--teal);color:var(--teal)}
+.btn-3{color:var(--slate);padding-inline:.4rem}
+.btn-3:hover{color:var(--ink)}
+.ext{font-size:.85em;opacity:.75}
 
-      .boot-dots span {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #5d84ff;
-        opacity: 0.22;
-        animation: zorinPulse 0.83s ease-in-out infinite;
-      }
+/* glance strip */
+.glance{
+  margin-top:clamp(2rem,4vw,3rem);border-top:1px solid var(--line);
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;
+}
+.glance div{padding:1.15rem 1.4rem 0 0}
+.glance div + div{padding-left:1.4rem;border-left:1px solid var(--line)}
+.glance dt{
+  font-family:var(--mono);font-size:.705rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--teal);font-weight:600;margin-bottom:.4rem;
+}
+.glance dd{margin:0;font-size:.92rem;font-weight:550;color:var(--ink);line-height:1.45}
+.glance dd small{display:block;font-weight:400;color:var(--slate);font-size:.86em;margin-top:.15rem}
 
-      .boot-dots span:nth-child(2) {
-        animation-delay: 0.09s;
-      }
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:2rem}
+  .hero-photo{max-width:230px;margin-left:0;order:-1}
+  .glance{grid-template-columns:1fr}
+  .glance div{padding:1.05rem 0 0}
+  .glance div + div{padding-left:0;border-left:0;border-top:1px solid var(--line)}
+}
 
-      .boot-dots span:nth-child(3) {
-        animation-delay: 0.18s;
-      }
+/* ---------- sections ---------- */
+.sec{padding:var(--sec) 0}
+.sec-mist{background:var(--mist);border-block:1px solid var(--line)}
+.dark{background:var(--ink);color:#fff}
+.dark h2,.dark h3{color:#fff}
+.dark p{color:var(--dim)}
 
-      .boot-dots span:nth-child(4) {
-        animation-delay: 0.27s;
-      }
+/* about */
+.about-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:clamp(1.5rem,4vw,3.5rem)}
+.about-grid .body{font-size:1.03em}
+.about-grid .body p{color:var(--slate)}
+.about-grid .body p strong{color:var(--ink);font-weight:600}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr;gap:1.5rem}}
 
-      .boot-dots span:nth-child(5) {
-        animation-delay: 0.36s;
-      }
+/* teaching */
+.role-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(1.3rem,3vw,2rem);
+}
+.role-top{display:flex;flex-wrap:wrap;gap:.6rem 1.5rem;align-items:baseline;justify-content:space-between}
+.role-top h3{font-size:clamp(1.15rem,1rem + .6vw,1.42rem)}
+.role-org{color:var(--teal);font-weight:600;font-size:.98rem;margin-top:.3rem}
+.dates{font-family:var(--mono);font-size:.795rem;letter-spacing:.06em;color:var(--slate);white-space:nowrap}
+.strands{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,205px),1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);
+  margin-top:1.6rem;overflow:hidden;
+}
+.strands li{background:var(--paper);padding:1.05rem 1.15rem}
+.strands b{display:block;font-size:.98rem;font-weight:650;margin-bottom:.3rem}
+.strands span{font-size:.87rem;color:var(--slate);line-height:1.5;display:block}
+.strand-n{font-family:var(--mono);font-size:.68rem;color:var(--teal);letter-spacing:.12em;display:block;margin-bottom:.5rem;font-weight:600}
 
-      .boot-scan {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -14%;
-        height: 24%;
-        background: linear-gradient(180deg, rgba(88, 124, 255, 0), rgba(88, 124, 255, 0.2), rgba(88, 124, 255, 0));
-        animation: zorinScan 1.8s linear infinite;
-        pointer-events: none;
-      }
+/* experience */
+.exp{display:grid;gap:0}
+.exp-item{padding:clamp(1.4rem,3vw,2.1rem) 0;border-top:1px solid var(--line)}
+.exp-item:last-child{border-bottom:1px solid var(--line)}
+.exp-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.4rem 1.5rem;align-items:baseline}
+.exp-head h3{font-size:clamp(1.1rem,1rem + .55vw,1.3rem)}
+.exp-org{color:var(--teal);font-weight:600;font-size:.95rem;margin-top:.25rem}
+.exp-body{margin-top:.9rem;color:var(--slate);max-width:70ch}
+.chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+.chip{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--slate);
+  border:1px solid var(--line);border-radius:var(--r);padding:.38rem .6rem;background:var(--paper);
+}
+.sec-mist .chip{background:var(--paper)}
+@media (max-width:560px){.exp-head{grid-template-columns:1fr}.dates{white-space:normal}}
 
-      @keyframes zorinPulse {
-        0%,
-        100% {
-          transform: scale(0.82);
-          opacity: 0.2;
-        }
-        50% {
-          transform: scale(1.05);
-          opacity: 1;
-        }
-      }
+/* credentials */
+.cred-featured{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,268px),1fr));
+  gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+}
+.cred-featured li{background:var(--paper);padding:1.25rem 1.3rem;display:flex;flex-direction:column;gap:.55rem}
+.cred-issuer{
+  font-family:var(--mono);font-size:.71rem;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--slate);font-weight:600;
+}
+.cred-name{font-size:1.02rem;font-weight:650;line-height:1.3;overflow-wrap:anywhere}
+.cred-meta{margin-top:auto;font-size:.83rem;color:var(--slate);display:flex;align-items:center;gap:.45rem}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex:0 0 auto}
+.dot-grey{background:var(--slate);opacity:.5}
 
-      @keyframes zorinScan {
-        from {
-          transform: translateY(-8vh);
-        }
-        to {
-          transform: translateY(118vh);
-        }
-      }
+.subhead{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink);font-weight:700;margin:clamp(2.4rem,5vw,3.4rem) 0 .5rem;
+}
+.subhead + .note{color:var(--slate);font-size:.89rem;max-width:70ch;margin:0 0 1.3rem}
 
-      @media (prefers-reduced-motion: reduce) {
-        .boot-dots span,
-        .boot-scan {
-          animation: none;
-        }
-      }
+/* year rail */
+.rail{border-top:1px solid var(--line)}
+.rail-row{display:grid;grid-template-columns:4.25rem minmax(0,1fr);gap:0 1.1rem;border-bottom:1px solid var(--line);padding:1rem 0}
+.rail-year{font-family:var(--mono);font-size:.95rem;font-weight:600;color:var(--teal);letter-spacing:.02em;padding-top:1px}
+.rail-list li{padding:.28rem 0;overflow-wrap:anywhere}
+.rail-list b{font-weight:600;font-size:.96rem}
+.rail-list i{font-style:normal;color:var(--slate);font-size:.86rem;display:block;margin-top:1px}
+@media (max-width:400px){.rail-row{grid-template-columns:3.3rem minmax(0,1fr);gap:0 .7rem}.rail-year{font-size:.85rem}}
 
-      .page {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 34px 20px 40px;
-      }
+/* valid list */
+.valid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,282px),1fr));gap:.7rem;
+}
+.valid li{
+  background:var(--paper);padding:1rem 1.1rem;
+  border:1px solid var(--line);border-radius:var(--r);
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:.65rem;align-items:start;
+}
+.valid-one{max-width:400px}
+.valid .dot{margin-top:.5rem}
+.valid b{font-weight:600;font-size:.95rem;line-height:1.35;overflow-wrap:anywhere;display:block}
+.valid i{font-style:normal;display:block;color:var(--slate);font-size:.8rem;font-family:var(--mono);letter-spacing:.03em;margin-top:.3rem}
 
-      .topbar {
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 10px;
-      }
+.cred-cta{margin-top:clamp(2rem,4vw,2.8rem);display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
 
-      .theme-toggle {
-        border: 1px solid var(--line);
-        background: var(--panel);
-        color: var(--muted);
-        width: 30px;
-        height: 30px;
-        border-radius: 999px;
-        cursor: pointer;
-        font-size: 14px;
-        line-height: 1;
-      }
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(1.6rem,3.5vw,2.6rem)}
+.skills h3{font-size:1.02rem;padding-bottom:.7rem;border-bottom:2px solid var(--teal-lt);margin-bottom:.9rem}
+.skills ul li{
+  padding:.42rem 0;font-size:.93rem;color:var(--dim);
+  border-bottom:1px solid rgba(168,188,208,.16);
+}
+.skills ul li:last-child{border-bottom:0}
+.skills-note{color:var(--dim);font-size:.86rem;margin-top:2.4rem;max-width:74ch}
 
-      .container {
-        background: var(--panel);
-        border: 1px solid var(--line);
-        border-radius: 18px;
-        padding: 28px;
-        display: grid;
-        grid-template-columns: minmax(230px, 0.95fr) minmax(0, 2.05fr);
-        gap: 30px;
-      }
+/* education */
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.edu li{background:var(--paper);padding:1.4rem 1.35rem}
+.edu b{display:block;font-size:1.02rem;font-weight:650;margin-bottom:.35rem}
+.edu span{color:var(--slate);font-size:.92rem}
 
-      .left-column {
-        padding-right: 8px;
-      }
+/* contact */
+.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:start}
+.links li{border-bottom:1px solid rgba(168,188,208,.2)}
+.links a{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem;align-items:baseline;
+  padding:.95rem 0;color:#fff;text-decoration:none;
+}
+.links a:hover{color:var(--teal-lt)}
+.links a:hover .lk-val{color:var(--teal-lt)}
+.lk-lab{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-lt);display:block;margin-bottom:.25rem;font-weight:600}
+.lk-name{font-size:1rem;font-weight:600}
+.lk-val{font-size:.83rem;color:var(--dim);text-align:right;overflow-wrap:anywhere}
+@media (max-width:760px){
+  .contact-grid{grid-template-columns:1fr;gap:1.6rem}
+  .links a{grid-template-columns:1fr}
+  .lk-val{text-align:left;margin-top:.15rem}
+}
 
-      .right-column {
-        border-left: 1px solid var(--line);
-        padding-left: 30px;
-      }
+/* footer */
+.foot{background:var(--ink);border-top:1px solid rgba(168,188,208,.2);padding:1.9rem 0;color:var(--dim);font-size:.84rem}
+.foot-in{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between;align-items:center}
+.foot b{color:#fff;font-weight:600}
+.foot a{color:var(--dim);display:inline-block;padding:.35rem 0}
+.foot a:hover{color:#fff}
 
-      .profile-img {
-        width: 100%;
-        max-width: 180px;
-        border-radius: 12px;
-        margin-bottom: 18px;
-      }
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
 
-      h2[itemprop="name"] {
-        font-size: 1.7rem;
-        letter-spacing: -0.02em;
-        margin: 0 0 10px;
-      }
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">Richard Tokar<span>Computer Technology</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navlinks">
+      <span class="bars" aria-hidden="true"></span>Menu
+    </button>
+    <nav id="navlinks" class="nav-links" aria-label="Section navigation">
+      <a href="#about">About</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#experience">Experience</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      .info-item {
-        margin: 0 0 8px;
-        color: var(--muted);
-      }
+<main id="main">
 
-      .info-item i {
-        display: none;
-      }
-
-      h2.section-title {
-        margin: 26px 0 12px;
-        font-size: 0.75rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        font-weight: 650;
-        color: var(--muted);
-        padding-bottom: 8px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .section-title i,
-      h3 i,
-      p i {
-        display: none;
-      }
-
-      h3 {
-        font-size: 1.02rem;
-        font-weight: 600;
-        margin: 0 0 6px;
-      }
-
-      p {
-        margin: 0 0 12px;
-      }
-
-      .muted-line {
-        color: var(--muted);
-        font-size: 0.94rem;
-      }
-
-      .skills-list,
-      .links-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-
-      .skill-bar,
-      .links-list p {
-        margin: 0;
-      }
-
-      .skill-bar p,
-      .links-list a {
-        display: inline-block;
-        border: 1px solid var(--chip-border);
-        background: var(--chip-bg);
-        border-radius: 999px;
-        padding: 4px 10px;
-        font-size: 0.82rem;
-        color: var(--muted);
-        text-decoration: none;
-      }
-
-      .links-list a {
-        line-height: 0;
-      }
-
-      .links-list a svg {
-        width: 15px;
-        height: 15px;
-        display: block;
-      }
-
-      a {
-        color: var(--link);
-        text-underline-offset: 2px;
-      }
-
-      a:hover {
-        color: var(--link-hover);
-        text-decoration: underline;
-      }
-
-      .role {
-        padding-bottom: 16px;
-        margin-bottom: 16px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .role:last-child,
-      .education-item:last-child {
-        border-bottom: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
-      }
-
-      .education-item {
-        padding-bottom: 12px;
-        margin-bottom: 12px;
-        border-bottom: 1px solid var(--line);
-      }
-
-      footer {
-        margin-top: 14px;
-        text-align: center;
-        color: var(--muted);
-        font-size: 0.84rem;
-      }
-
-      @media (max-width: 820px) {
-        .page {
-          padding: 18px 12px 24px;
-        }
-
-        .container {
-          grid-template-columns: 1fr;
-          padding: 20px;
-          gap: 20px;
-        }
-
-        .right-column {
-          border-left: 0;
-          border-top: 1px solid var(--line);
-          padding-left: 0;
-          padding-top: 20px;
-        }
-      }
-
-      @media print {
-        :root,
-        html[data-theme="dark"],
-        html[data-theme="light"] {
-          --bg: #ffffff;
-          --panel: #ffffff;
-          --text: #000000;
-          --muted: #222222;
-          --line: #d1d5db;
-          --chip-bg: #ffffff;
-          --chip-border: #9ca3af;
-          --link: #000000;
-          --link-hover: #000000;
-        }
-
-        body {
-          background: #ffffff;
-          color: #000000;
-          font-size: 11pt;
-        }
-
-        .page {
-          max-width: none;
-          padding: 0;
-        }
-
-        .topbar,
-        .theme-toggle,
-        .boot-screen {
-          display: none;
-        }
-
-        .container {
-          border: 0;
-          border-radius: 0;
-          padding: 0;
-          gap: 18px;
-        }
-
-        .profile-img {
-          max-width: 150px;
-        }
-
-        a {
-          text-decoration: none;
-        }
-      }
-    </style>
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAADAwMA//8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAEREAAAARAAAAAAAAAAEQAAAAAAAAABEAAAAAAAAAARAAAAAAAAAAEQAAAAAAAABEAAAAAAAABEAAAAAAAABEAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" sizes="16x16 32x32" />
-  </head>
-  <body class="is-booting">
-    <div class="boot-screen" aria-hidden="true">
-      <div class="boot-scan"></div>
-      <div class="boot-center">
-        <h1 class="boot-name">Richard Tokar</h1>
-        <div class="boot-dots">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">OCM BOCES &middot; Camillus, New York</p>
+        <h1>Richard Tokar</h1>
+        <p class="hero-role">Computer Technology Teacher &mdash; <em>cybersecurity, networking, hardware &amp; software</em></p>
+        <p class="hero-lede">I teach high school students how real computer systems are built, secured, and kept running. My courses are dual-enrollment through a SUNY partnership, so students leave with transferable college credit and the practical grounding to keep going. Before the classroom, I spent five years directing IT for a 1,000-employee organization across ten locations.</p>
+        <div class="actions">
+          <a class="btn btn-1" href="#experience">Explore experience</a>
+          <a class="btn btn-2" href="https://www.credly.com/users/richardtokar" target="_blank" rel="noopener noreferrer">View digital credentials <span class="ext" aria-hidden="true">&#8599;</span><span class="vh"> (opens in a new tab)</span></a>
+          <a class="btn btn-3" href="#contact">Contact</a>
         </div>
+      </div>
+      <div class="hero-photo">
+        <img src="richard-tokar-photo.jpg" width="760" height="950"
+             alt="Portrait of Richard Tokar, Computer Technology teacher at OCM BOCES."
+             fetchpriority="high" decoding="async">
       </div>
     </div>
 
-    <div class="page">
-      <div class="topbar"></div>
+    <dl class="glance">
+      <div>
+        <dt>Current certifications</dt>
+        <dd>CompTIA CySA+, PenTest+, Security+<small>All valid through 2028</small></dd>
+      </div>
+      <div>
+        <dt>Classroom since</dt>
+        <dd>August 2018<small>Recognized by Cisco for five years of instruction</small></dd>
+      </div>
+      <div>
+        <dt>Education</dt>
+        <dd>MBA, Management Information Systems<small>Binghamton University</small></dd>
+      </div>
+    </dl>
+  </div>
+</section>
 
-      <main class="container" itemscope itemtype="https://schema.org/Person">
-        <section class="left-column">
-          <img src="./me.png" alt="Avatar of Richard Tokar" class="profile-img" itemprop="image" />
-          <h2 itemprop="name">Richard Tokar</h2>
-          <p class="info-item">
-            <i class="fa fa-briefcase"></i>
-            <span itemprop="jobTitle">Teacher - Computer Technology @ OCM BOCES | Pentest+, CySA+</span>
-          </p>
-          <p class="info-item">
-            <i class="fa fa-home"></i>
-            <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-              <span itemprop="addressLocality">Camillus, NY</span>
-            </span>
-          </p>
-          <p class="info-item">
-            <i class="fa fa-envelope"></i>
-            <a href="mailto:richardtokar@gmail.com" itemprop="email">richardtokar@gmail.com</a>
-          </p>
+<hr class="rule">
 
-          <div class="links-list" itemscope itemtype="https://schema.org/Organization">
-            <p>
-              <a href="https://www.linkedin.com/in/richardtokar" target="_blank" itemprop="sameAs" aria-label="LinkedIn" title="LinkedIn">
-                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                  <path fill="#0A66C2" d="M20.45 20.45h-3.56v-5.59c0-1.33-.03-3.04-1.85-3.04c-1.86 0-2.14 1.45-2.14 2.95v5.68H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85c3.6 0 4.27 2.37 4.27 5.45zM5.33 7.43a2.06 2.06 0 1 1 0-4.12a2.06 2.06 0 0 1 0 4.12m1.78 13.02H3.55V9h3.56z"/>
-                </svg>
-              </a>
-            </p>
-            <p>
-              <a href="https://www.youtube.com/channel/UCameFLNiTtCvFm2hWwRIdHQ" target="_blank" itemprop="sameAs" aria-label="YouTube" title="YouTube">
-                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                  <path fill="#FF0000" d="M23.5 7.2a3 3 0 0 0-2.1-2.1C19.5 4.5 12 4.5 12 4.5s-7.5 0-9.4.6A3 3 0 0 0 .5 7.2A31.2 31.2 0 0 0 0 12a31.2 31.2 0 0 0 .5 4.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.2 31.2 0 0 0 24 12a31.2 31.2 0 0 0-.5-4.8M9.6 15.3V8.7l5.8 3.3z"/>
-                </svg>
-              </a>
-            </p>
-            <p>
-              <a href="https://sites.google.com/ocmboces.org/computertechnology/home" target="_blank" itemprop="sameAs" aria-label="Google Sites" title="Google Sites">
-                <svg viewBox="0 0 24 24" role="img" aria-hidden="true">
-                  <path fill="#EA4335" d="M12.2 10.2v3.8h5.3c-.2 1.2-1.4 3.5-5.3 3.5c-3.2 0-5.8-2.7-5.8-6s2.6-6 5.8-6c1.8 0 3 .8 3.7 1.5l2.5-2.4C16.8 3 14.7 2 12.2 2C6.7 2 2.2 6.5 2.2 12s4.5 10 10 10c5.8 0 9.6-4.1 9.6-9.9c0-.7-.1-1.3-.2-1.9z"/>
-                </svg>
-              </a>
-            </p>
-          </div>
+<!-- ABOUT -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="sec-head" style="margin-bottom:0">
+        <p class="eyebrow">Profile</p>
+        <h2>Two careers, one subject</h2>
+      </div>
+      <div class="body">
+        <p>I came to teaching from inside the field. As <strong>Director of IT at ARISE</strong>, I was responsible for the infrastructure, strategy, and day-to-day execution that kept a thousand people working across ten sites. That experience is what I bring into the classroom &mdash; not just what a technology does, but what it costs when it fails and who depends on it.</p>
+        <p>Since 2018 I have taught <strong>Computer Technology at OCM BOCES</strong>, where high school students take dual-enrollment Information Technology coursework in cybersecurity, networking, and computer hardware and software. The partnership with SUNY means the work counts twice: as career and technical preparation, and as college credit that transfers.</p>
+        <p>I keep certifying alongside my students. My first CompTIA exams were in 2001; my most recent credentials, in artificial intelligence, were issued in 2026. That <strong>twenty-five-year span</strong> is the clearest evidence I can offer that this field rewards people who never stop being students &mdash; which is exactly what I am asking of the young people in my classroom.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <div itemscope itemtype="https://schema.org/Organization">
-            <h3 itemprop="name">Credly</h3>
-            <p>
-              <a href="https://www.credly.com/users/richardtokar" target="_blank" itemprop="url">Professional Certifications</a>
-            </p>
-          </div>
-
-          <h2 class="section-title"><i class="fa fa-asterisk"></i> Tech Skills</h2>
-          <div class="skills-list">
-            <div class="skill-bar"><p>Hardware/Software</p></div>
-            <div class="skill-bar"><p>Networking</p></div>
-            <div class="skill-bar"><p>Cybersecurity</p></div>
-          </div>
-
-          <h2 class="section-title"><i class="fa fa-globe"></i> Languages</h2>
-          <div class="skills-list">
-            <div class="skill-bar"><p>Python</p></div>
-            <div class="skill-bar"><p>SQL</p></div>
-            <div class="skill-bar"><p>HTML/CSS</p></div>
-          </div>
-        </section>
-
-        <section class="right-column">
-          <div>
-            <h2 class="section-title"><i class="fa fa-suitcase"></i> Work Experience</h2>
-            <div class="role" itemscope itemtype="https://schema.org/Organization">
-              <h3 itemprop="name">Computer Technology Teacher / OCM BOCES</h3>
-              <p class="muted-line"><i class="fa fa-calendar"></i> <span itemprop="startDate">Aug 2018</span> - <span class="tag">Current</span></p>
-              <p itemprop="description">Instruct high school students in dual-enrollment Information Technology courses, including Cybersecurity, Networking, and Computer Hardware/Software. Through a partnership with SUNY, the curriculum provides students with foundational knowledge and transferable college credits, preparing them for continued education and careers in the tech industry.</p>
-            </div>
-            <div class="role" itemscope itemtype="https://schema.org/Organization">
-              <h3 itemprop="name">Director of IT / ARISE</h3>
-              <p class="muted-line"><i class="fa fa-calendar"></i> <span itemprop="startDate">May 2013</span> - <span itemprop="endDate">May 2018</span></p>
-              <p itemprop="description">Directed all IT infrastructure, strategy, and execution for an organization supporting 1000 employees across 10 locations.</p>
-            </div>
-          </div>
-
-          <div>
-            <h2 class="section-title"><i class="fa fa-certificate"></i> Education</h2>
-            <div class="education-item" itemscope itemtype="https://schema.org/EducationalOrganization">
-              <h3 itemprop="name">Binghamton University</h3>
-              <p itemprop="description">MBA / Management Information Systems</p>
-            </div>
-            <div class="education-item" itemscope itemtype="https://schema.org/EducationalOrganization">
-              <h3 itemprop="name">University at Albany</h3>
-              <p itemprop="description">BA</p>
-            </div>
-            <div class="education-item" itemscope itemtype="https://schema.org/EducationalOrganization">
-              <h3 itemprop="name">NYS Department of Education</h3>
-              <p itemprop="description">Computer Technology 7-12 Teaching Credential</p>
-            </div>
-          </div>
-        </section>
-      </main>
-
+<!-- TEACHING -->
+<section class="sec sec-mist" id="teaching">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Current role</p>
+      <h2>What I teach</h2>
+      <p>Dual-enrollment Information Technology instruction for high school students, delivered in partnership with SUNY so that coursework carries transferable college credit.</p>
     </div>
 
-    <script>
-      (function () {
-        var body = document.body;
-        window.setTimeout(function () {
-          body.classList.remove("is-booting");
-          body.classList.add("boot-complete");
-        }, 1955);
-      })();
-    </script>
-  </body>
+    <div class="role-card">
+      <div class="role-top">
+        <div>
+          <h3>Computer Technology Teacher</h3>
+          <p class="role-org">OCM BOCES &middot; Camillus, New York</p>
+        </div>
+        <p class="dates">Aug 2018 &mdash; Present</p>
+      </div>
+
+      <ul class="strands">
+        <li>
+          <span class="strand-n">01</span>
+          <b>Computer Hardware &amp; Software</b>
+          <span>How machines are assembled, configured, maintained, and repaired &mdash; the physical and operating-system foundation everything else sits on.</span>
+        </li>
+        <li>
+          <span class="strand-n">02</span>
+          <b>Networking</b>
+          <span>How devices find and talk to one another: addressing, routing, wireless, and the troubleshooting discipline that makes networks supportable.</span>
+        </li>
+        <li>
+          <span class="strand-n">03</span>
+          <b>Cybersecurity</b>
+          <span>How systems are attacked and defended &mdash; access control, vulnerability assessment, and the professional ethics that have to come with them.</span>
+        </li>
+      </ul>
+
+      <div class="chips" style="margin-top:1.5rem">
+        <span class="chip">Dual enrollment</span>
+        <span class="chip">SUNY partnership</span>
+        <span class="chip">Transferable college credit</span>
+        <span class="chip">Career &amp; technical education</span>
+      </div>
+
+      <p style="margin-top:1.55rem">
+        <a class="btn btn-2" href="https://sites.google.com/ocmboces.org/computertechnology/home" target="_blank" rel="noopener noreferrer">Visit the program site <span class="ext" aria-hidden="true">&#8599;</span><span class="vh"> (opens in a new tab)</span></a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="sec" id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Professional experience</p>
+      <h2>Background</h2>
+    </div>
+
+    <div class="exp">
+      <article class="exp-item">
+        <div class="exp-head">
+          <div>
+            <h3>Computer Technology Teacher</h3>
+            <p class="exp-org">OCM BOCES</p>
+          </div>
+          <p class="dates">Aug 2018 &mdash; Present</p>
+        </div>
+        <div class="exp-body">
+          <p>Instruct high school students in dual-enrollment Information Technology courses covering cybersecurity, networking, and computer hardware and software. Through a partnership with SUNY, the curriculum gives students both foundational technical knowledge and transferable college credits, preparing them for continued education and careers in the technology industry.</p>
+        </div>
+        <div class="chips">
+          <span class="chip">Cybersecurity</span>
+          <span class="chip">Networking</span>
+          <span class="chip">Hardware &amp; software</span>
+          <span class="chip">Dual enrollment</span>
+        </div>
+      </article>
+
+      <article class="exp-item">
+        <div class="exp-head">
+          <div>
+            <h3>Director of Information Technology</h3>
+            <p class="exp-org">ARISE</p>
+          </div>
+          <p class="dates">May 2013 &mdash; May 2018</p>
+        </div>
+        <div class="exp-body">
+          <p>Directed all IT infrastructure, strategy, and execution for an organization supporting 1,000 employees across ten locations.</p>
+        </div>
+        <div class="chips">
+          <span class="chip">1,000 employees</span>
+          <span class="chip">10 locations</span>
+          <span class="chip">Infrastructure</span>
+          <span class="chip">Strategy</span>
+          <span class="chip">Execution</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section class="sec sec-mist" id="credentials">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Digital credentials</p>
+      <h2>Verified through Credly</h2>
+      <p>Twenty-seven badges issued by CompTIA, Coursera, Cisco, IBM SkillsBuild, Amazon Web Services Training and Certification, the Python Institute, the JS Institute, and American Mensa. Every credential below is independently verifiable on Credly.</p>
+    </div>
+
+    <ul class="cred-featured">
+      <li>
+        <span class="cred-issuer">CompTIA</span>
+        <span class="cred-name">CySA+ ce &mdash; Cybersecurity Analyst</span>
+        <span class="cred-meta"><span class="dot" aria-hidden="true"></span>Valid through 9 August 2028</span>
+      </li>
+      <li>
+        <span class="cred-issuer">CompTIA</span>
+        <span class="cred-name">PenTest+ ce &mdash; Penetration Testing</span>
+        <span class="cred-meta"><span class="dot" aria-hidden="true"></span>Valid through 28 August 2028</span>
+      </li>
+      <li>
+        <span class="cred-issuer">CompTIA</span>
+        <span class="cred-name">Security+ ce</span>
+        <span class="cred-meta"><span class="dot" aria-hidden="true"></span>Valid through 28 August 2028</span>
+      </li>
+      <li>
+        <span class="cred-issuer">Coursera</span>
+        <span class="cred-name">Google AI Professional Certificate</span>
+        <span class="cred-meta"><span class="dot dot-grey" aria-hidden="true"></span>Issued 29 March 2026</span>
+      </li>
+      <li>
+        <span class="cred-issuer">Amazon Web Services</span>
+        <span class="cred-name">AWS Academy Graduate &mdash; Cloud Foundations</span>
+        <span class="cred-meta"><span class="dot dot-grey" aria-hidden="true"></span>Issued 19 August 2021</span>
+      </li>
+      <li>
+        <span class="cred-issuer">Python Institute</span>
+        <span class="cred-name">PCEP &mdash; Certified Entry-Level Python Programmer</span>
+        <span class="cred-meta"><span class="dot dot-grey" aria-hidden="true"></span>Issued 3 August 2023</span>
+      </li>
+    </ul>
+
+    <h3 class="subhead">Currently valid certifications</h3>
+    <p class="note">CompTIA stackable certifications are awarded for holding defined combinations of CompTIA exams; they indicate certification breadth rather than a separate examination.</p>
+    <ul class="valid">
+      <li><span class="dot" aria-hidden="true"></span><span><b>CompTIA CySA+ ce</b><i>Through 9 Aug 2028</i></span></li>
+      <li><span class="dot" aria-hidden="true"></span><span><b>CompTIA Security Analytics Professional &mdash; CSAP</b><i>Stackable &middot; through 9 Aug 2028</i></span></li>
+      <li><span class="dot" aria-hidden="true"></span><span><b>CompTIA Network Security Professional &mdash; CNSP</b><i>Stackable &middot; through 9 Aug 2028</i></span></li>
+      <li><span class="dot" aria-hidden="true"></span><span><b>CompTIA PenTest+ ce</b><i>Through 28 Aug 2028</i></span></li>
+      <li><span class="dot" aria-hidden="true"></span><span><b>CompTIA Security+ ce</b><i>Through 28 Aug 2028</i></span></li>
+      <li><span class="dot" aria-hidden="true"></span><span><b>CompTIA Network Vulnerability Assessment Professional &mdash; CNVP</b><i>Stackable &middot; through 28 Aug 2028</i></span></li>
+      <li><span class="dot" aria-hidden="true"></span><span><b>CompTIA Secure Infrastructure Specialist &mdash; CSIS</b><i>Stackable &middot; through 28 Aug 2028</i></span></li>
+    </ul>
+
+    <h3 class="subhead">Credential record, 2001&ndash;2026</h3>
+    <p class="note">Listed by issue date. Credentials shown here are recorded with an issue date only; where no expiration is published, no claim of current validity is made.</p>
+    <div class="rail">
+      <div class="rail-row">
+        <p class="rail-year">2026</p>
+        <ul class="rail-list">
+          <li><b>Google AI for App Building</b><i>Coursera &middot; 21 April</i></li>
+          <li><b>Google AI for Research and Insights</b><i>Coursera &middot; 21 April</i></li>
+          <li><b>Google AI Fundamentals</b><i>Coursera &middot; 21 April</i></li>
+          <li><b>Google AI Professional Certificate</b><i>Coursera &middot; 29 March</i></li>
+        </ul>
+      </div>
+      <div class="rail-row">
+        <p class="rail-year">2025</p>
+        <ul class="rail-list">
+          <li><b>Introduction to Modern AI</b><i>Cisco &middot; 21 August</i></li>
+        </ul>
+      </div>
+      <div class="rail-row">
+        <p class="rail-year">2024</p>
+        <ul class="rail-list">
+          <li><b>WDE &mdash; Certified Entry-Level Web Developer</b><i>JS Institute &middot; 16 August</i></li>
+          <li><b>AI Fundamentals with IBM SkillsBuild</b><i>Cisco &middot; 2 July</i></li>
+          <li><b>Artificial Intelligence Fundamentals</b><i>IBM SkillsBuild &middot; 2 July</i></li>
+        </ul>
+      </div>
+      <div class="rail-row">
+        <p class="rail-year">2023</p>
+        <ul class="rail-list">
+          <li><b>PCEP &mdash; Certified Entry-Level Python Programmer</b><i>Python Institute &middot; 3 August</i></li>
+          <li><b>Data Analytics Essentials</b><i>Cisco &middot; 14 March</i></li>
+        </ul>
+      </div>
+      <div class="rail-row">
+        <p class="rail-year">2022</p>
+        <ul class="rail-list">
+          <li><b>Instructor &mdash; 5 Years of Service</b><i>Cisco &middot; 14 April</i></li>
+        </ul>
+      </div>
+      <div class="rail-row">
+        <p class="rail-year">2021</p>
+        <ul class="rail-list">
+          <li><b>AWS Academy Graduate &mdash; Cloud Foundations</b><i>Amazon Web Services Training and Certification &middot; 19 August</i></li>
+        </ul>
+      </div>
+      <div class="rail-row">
+        <p class="rail-year">2019</p>
+        <ul class="rail-list">
+          <li><b>CompTIA IT Fundamentals+ (ITF+)</b><i>CompTIA &middot; 3 June</i></li>
+        </ul>
+      </div>
+      <div class="rail-row">
+        <p class="rail-year">2001</p>
+        <ul class="rail-list">
+          <li><b>CompTIA Linux+</b><i>CompTIA &middot; 21 December</i></li>
+          <li><b>CompTIA Linux Network Professional &mdash; CLNP</b><i>CompTIA &middot; stackable &middot; 21 December</i></li>
+          <li><b>CompTIA Systems Support Specialist &mdash; CSSS</b><i>CompTIA &middot; stackable &middot; 21 December</i></li>
+          <li><b>CompTIA A+</b><i>CompTIA &middot; 26 November</i></li>
+          <li><b>CompTIA IT Operations Specialist &mdash; CIOS</b><i>CompTIA &middot; stackable &middot; 26 November</i></li>
+          <li><b>CompTIA Network+</b><i>CompTIA &middot; 20 June</i></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="subhead">Membership</h3>
+    <ul class="valid valid-one">
+      <li><span class="dot" aria-hidden="true"></span><span><b>American Mensa</b><i>Member through 31 Mar 2027</i></span></li>
+    </ul>
+
+    <div class="cred-cta">
+      <a class="btn btn-1" href="https://www.credly.com/users/richardtokar" target="_blank" rel="noopener noreferrer">View all digital credentials on Credly <span class="ext" aria-hidden="true">&#8599;</span><span class="vh"> (opens in a new tab)</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="sec dark" id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Skills &amp; expertise</p>
+      <h2>Where the depth is</h2>
+      <p style="color:var(--dim)">Curated from skills verified by badge evidence on Credly, ordered within each area by the weight of that evidence.</p>
+    </div>
+
+    <div class="skills">
+      <div>
+        <h3>Cybersecurity</h3>
+        <ul>
+          <li>Network Security</li>
+          <li>Access Control</li>
+          <li>Risk Management</li>
+          <li>Vulnerability Assessment</li>
+          <li>Application Security</li>
+          <li>Cryptography</li>
+          <li>Penetration Testing</li>
+          <li>Threat Management</li>
+          <li>Incident Response</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Networking &amp; Systems</h3>
+        <ul>
+          <li>Computer Network Management</li>
+          <li>Routing Protocols</li>
+          <li>Linux</li>
+          <li>Cloud Infrastructure</li>
+          <li>System Administration</li>
+          <li>Virtualization</li>
+          <li>Operating Systems</li>
+          <li>Technical Support</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Artificial Intelligence</h3>
+        <ul>
+          <li>Artificial Intelligence</li>
+          <li>Machine Learning</li>
+          <li>Computer Vision</li>
+          <li>Natural Language Processing</li>
+          <li>Prompt Engineering</li>
+          <li>AI Ethics</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Programming &amp; Web</h3>
+        <ul>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Bash</li>
+          <li>HTML5 &amp; Semantic HTML</li>
+          <li>CSS</li>
+          <li>Web Development</li>
+          <li>Programming Concepts</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Teaching Practice</h3>
+        <ul>
+          <li>Teaching</li>
+          <li>Communication Skills</li>
+          <li>Discussion Facilitation</li>
+          <li>Giving Presentations</li>
+          <li>Problem Solving</li>
+          <li>Professional Development Programs</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="skills-note">Credly verifies 114 distinct skills across these badges. The list above is a curated selection; ordering reflects how many badges evidence each skill and should not be read as a ranking of ability.</p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="sec" id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Education &amp; licensure</p>
+      <h2>Academic background</h2>
+    </div>
+    <ul class="edu">
+      <li>
+        <b>Binghamton University</b>
+        <span>MBA &mdash; Management Information Systems</span>
+      </li>
+      <li>
+        <b>University at Albany</b>
+        <span>Bachelor of Arts</span>
+      </li>
+      <li>
+        <b>New York State Education Department</b>
+        <span>Computer Technology 7&ndash;12 teaching credential</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="sec dark" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch</h2>
+        <p style="color:var(--dim);margin-top:.8rem">Camillus, New York. I welcome conversations with school and district leaders, CTE and STEM organizations, and colleagues working at the intersection of education and technology.</p>
+      </div>
+      <ul class="links">
+        <li>
+          <a href="mailto:richardtokar@gmail.com">
+            <span><span class="lk-lab">Email</span><span class="lk-name">richardtokar@gmail.com</span></span>
+            <span class="lk-val">Direct</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/richardtokar" target="_blank" rel="noopener noreferrer">
+            <span><span class="lk-lab">LinkedIn</span><span class="lk-name">Professional profile</span></span>
+            <span class="lk-val">linkedin.com/in/richardtokar</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.credly.com/users/richardtokar" target="_blank" rel="noopener noreferrer">
+            <span><span class="lk-lab">Credly</span><span class="lk-name">Verified digital credentials</span></span>
+            <span class="lk-val">credly.com/users/richardtokar</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://sites.google.com/ocmboces.org/computertechnology/home" target="_blank" rel="noopener noreferrer">
+            <span><span class="lk-lab">Program site</span><span class="lk-name">OCM BOCES Computer Technology</span></span>
+            <span class="lk-val">sites.google.com</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/channel/UCameFLNiTtCvFm2hWwRIdHQ" target="_blank" rel="noopener noreferrer">
+            <span><span class="lk-lab">YouTube</span><span class="lk-name">Technology instruction channel</span></span>
+            <span class="lk-val">youtube.com</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p style="margin:0">&copy; <span id="yr">2026</span> <b>Richard Tokar</b> &middot; Computer Technology Teacher, OCM BOCES</p>
+    <p style="margin:0"><a href="#top">Back to top</a></p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  /* current year */
+  var yr = document.getElementById("yr");
+  if (yr) { yr.textContent = String(new Date().getFullYear()); }
+
+  /* mobile navigation */
+  var btn = document.querySelector(".nav-toggle");
+  var menu = document.getElementById("navlinks");
+
+  function closeMenu() {
+    if (!menu || !btn) { return; }
+    menu.classList.remove("open");
+    btn.setAttribute("aria-expanded", "false");
+  }
+
+  if (btn && menu) {
+    btn.addEventListener("click", function () {
+      var open = menu.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    menu.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") { closeMenu(); }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") { closeMenu(); }
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 920) { closeMenu(); }
+    });
+  }
+
+  /* active section highlighting */
+  if ("IntersectionObserver" in window && menu) {
+    var links = {};
+    var targets = [];
+    Array.prototype.forEach.call(menu.querySelectorAll("a[href^='#']"), function (a) {
+      var id = a.getAttribute("href").slice(1);
+      var el = document.getElementById(id);
+      if (el) { links[id] = a; targets.push(el); }
+    });
+
+    var visible = {};
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { visible[en.target.id] = en.isIntersecting; });
+      var current = null;
+      targets.forEach(function (t) { if (visible[t.id] && !current) { current = t.id; } });
+      Object.keys(links).forEach(function (id) {
+        if (id === current) { links[id].setAttribute("aria-current", "true"); }
+        else { links[id].removeAttribute("aria-current"); }
+      });
+    }, { rootMargin: "-62px 0px -55% 0px", threshold: 0 });
+
+    targets.forEach(function (t) { io.observe(t); });
+  }
+})();
+</script>
+</body>
 </html>
